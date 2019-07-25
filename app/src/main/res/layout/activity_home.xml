@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="40dp"
+    android:background="@color/backroundHome"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:text="WELCOME"
+        android:textSize="32sp"
+        android:textColor="@color/textKuning"
+        android:textStyle="italic"
+        android:textDirection="firstStrong"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_below="@id/tv_welcome"
+        android:src="@drawable/icon_op"
+        android:id="@+id/img_profile"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"/>
+    <!--<Button-->
+        <!--android:id="@+id/btn_edit_photo"-->
+        <!--android:layout_below="@id/img_profile"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Edit Photo"-->
+        <!--android:layout_marginBottom="24dp"-->
+        <!--style="@style/Widget.AppCompat.ActionButton.CloseMode"/>-->
+
+    <LinearLayout
+        android:id="@+id/layout_text_name"
+        android:layout_below="@id/img_profile"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="16dp">
+        <ImageView
+            android:src="@drawable/ic_name"
+            android:layout_weight="1"
+            android:layout_width="70dp"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/edt_name_home"
+            android:hint="Name"
+            android:textColor="@color/textKuning"
+            android:inputType="textPersonName"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_text_email"
+        android:layout_below="@id/layout_text_name"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+        <ImageView
+            android:src="@drawable/ic_email"
+            android:layout_weight="1"
+            android:layout_width="70dp"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/edt_email_home"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_weight="1"
+            android:textColor="@color/textKuning"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:text="Logout"
+        android:background="@android:color/holo_red_dark"
+        android:textColor="@color/textKuning"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
